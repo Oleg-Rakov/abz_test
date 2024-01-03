@@ -1,0 +1,22 @@
+.header {
+  font-size: 20px;
+
+  background: #FFF;
+  height: 60px;
+
+  .wrapper {
+    max-width: 1170px;
+    width: 100%;
+    padding: 17px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+

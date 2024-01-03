@@ -1,0 +1,22 @@
+.wrapper {
+  text-align: center;
+  background-image: url("../../assets/images/info.png");
+  height: 650px;
+  color: white;
+
+
+  .content {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+
+    .title {
+      padding-top: 164px;
+      font-size: 40px;
+    }
+
+    .descr {
+      margin: 21px 0px 32px 0px;
+    }
+  }
+}
