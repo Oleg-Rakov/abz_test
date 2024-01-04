@@ -1,6 +1,7 @@
 .wrapper {
   text-align: center;
   background-image: url("../../assets/images/info.png");
+  background-repeat: round;
   height: 650px;
   color: white;
 
@@ -11,12 +12,48 @@
     margin: 0 auto;
 
     .title {
+      font-size: var(--title-font-size);
+      line-height: var(--title-line-height);
       padding-top: 164px;
-      font-size: 40px;
     }
 
     .descr {
       margin: 21px 0px 32px 0px;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1035px) {
+  .wrapper {
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    height: 500px;
+    .content {
+      .title {
+        padding-top: 89px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .wrapper {
+    padding: 0 16px;
+    height: 600px;
+
+    .content {
+      .title {
+        padding-top: 40px;
+      }
     }
   }
 }

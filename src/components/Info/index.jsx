@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "../Button";
 import style from './info.module.scss';
 
 const Info = () => {
@@ -14,7 +15,7 @@ const Info = () => {
           should also be excited to learn, as the world of Front-End Development keeps evolving.
         </div>
         <div className={style.btn}>
-          <button>Sign up</button>
+          <Button text='Sign up' targetId='signup'/>
         </div>
       </div>
     </div>

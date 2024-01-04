@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "../Button";
 import logo from '../../assets/images/header_logo.svg';
 import style from './header.module.scss';
 
@@ -10,9 +11,9 @@ const Header = () => {
           <img src={logo} alt='logo'/>
           <span>TESTTASK</span>
         </div>
-        <div>
-          <button>Users</button>
-          <button>Sign up</button>
+        <div className={style.buttonWrapper}>
+          <Button text='Users' targetId='users'/>
+          <Button text='Sign up' targetId='signup'/>
         </div>
       </div>
     </header>

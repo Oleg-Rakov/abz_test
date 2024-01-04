@@ -1,0 +1,35 @@
+.commonButton {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  padding: 4px 0;
+  background: var(--Primary, #F4E041);
+  border-radius: 80px;
+  cursor: pointer;
+  color: black;
+  transition: .3s all ease;
+
+  &:hover {
+    background: #FFE302;
+  }
+
+  &:disabled {
+    background: #B4B4B4;
+    color: white;
+    cursor: not-allowed;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .btnWrapper {
+    display: flex;
+    justify-content: center;
+    .commonButton {
+      width: 90px;
+      font-size: 14px;
+    }
+  }
+}

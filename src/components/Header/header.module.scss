@@ -1,6 +1,10 @@
-.header {
-  font-size: 20px;
+/* Set a default font size using a CSS variable */
+:root {
+  --font-size: 16px;
+}
 
+.header {
+  font-size: var(--font-size);
   background: #FFF;
   height: 60px;
 
@@ -16,6 +20,30 @@
     .logo {
       display: flex;
       align-items: center;
+      cursor: pointer;
+    }
+
+    .buttonWrapper {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+  .header {
+    padding: 0 32px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+
+    .wrapper {
+      gap: 14px;
     }
   }
 }

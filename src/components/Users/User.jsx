@@ -1,6 +1,7 @@
 import React from 'react';
-import style from './users.module.scss';
+import CustomToolTip from "../CustomTooltip";
 import photoCover from "../../assets/images/photo-cover.svg";
+import style from './users.module.scss';
 
 const User = ({user}) => {
   const handleImageError = (event) => {
@@ -12,10 +13,18 @@ const User = ({user}) => {
       <div className={style.userImg}>
         <img src={user.photo} onError={handleImageError} alt={user.name}/>
       </div>
-      <div className={`${style.userName} ${style.truncate}`} title={user.name}>{user.name}</div>
-      <div className={`${style.userPosition} ${style.truncate}`} title={user.position}>{user.position}</div>
-      <div className={`${style.userEmail} ${style.truncate}`} title={user.email}>{user.email}</div>
-      <div className={`${style.userPhone} ${style.truncate}`} title={user.phone}>{user.phone}</div>
+      <CustomToolTip text={user.name}>
+        <div className={`${style.userName} ${style.truncate}`}>{user.name}</div>
+      </CustomToolTip>
+      <CustomToolTip text={user.position}>
+        <div className={`${style.userPosition} ${style.truncate}`}>{user.position}</div>
+      </CustomToolTip>
+      <CustomToolTip text={user.email}>
+        <div className={`${style.userEmail} ${style.truncate}`}>{user.email}</div>
+      </CustomToolTip>
+      <CustomToolTip text={user.phone}>
+        <div className={`${style.userPhone} ${style.truncate}`}>{user.phone}</div>
+      </CustomToolTip>
     </div>
   );
 };
